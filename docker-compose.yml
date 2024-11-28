@@ -1,0 +1,15 @@
+﻿version: "3.11"
+
+services:
+  df-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      - NODE_ENV=production
+    #    volumes:
+    #      - .:/app
+    command: [ "pnpm", "start" ]

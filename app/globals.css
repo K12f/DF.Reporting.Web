@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #ffffff;
+    --foreground: #9a8866;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    @apply bg-black text-base min-h-screen;
+    /*color: var(--foreground);*/
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    /*background: #000;*/
+    /*color: #9a8866;*/
+    /*overflow-y: scroll;*/
+}
+
+.page-content {
+    height: calc(100vh - 100px)
+}
+
+.ant-splitter-panel {
+    flex-basis: auto !important;
+}
